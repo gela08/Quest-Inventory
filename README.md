@@ -1,42 +1,49 @@
 ===========================================================
-GITHUB IMAGE MANAGER - SETUP & INSTRUCTIONS
+    QUEST LOG: CLOUD IMAGE MANAGER - SETUP GUIDE
 ===========================================================
 
-1. GITHUB CLOUD SETUP
----------------------
-To use this app, you must first prepare your GitHub storage:
 
-A. Create a Repository:
-   Go to GitHub and create a new repository (e.g., "my-cloud-storage").
+<!-- token : ??? -->
+ <!-- name: gela08 -->
+  <!-- repo: gela08/Quest-Inventory -->
+   <!-- folder path: images -->
 
-B. Generate an Access Token:
-   1. Go to GitHub Settings > Developer Settings.
-   2. Select "Personal access tokens" > "Tokens (classic)".
-   3. Click "Generate new token (classic)".
-   4. Check the "repo" box (this allows the app to save images).
-   5. Set expiration to "90 days".
-   6. Click "Generate" and COPY the token immediately.
 
-2. RUNNING THE APPLICATION
---------------------------
-1. Open "index.html" in any web browser (Chrome, Edge, etc.).
-2. In the top settings panel, enter:
-   - Token: Paste your secret key here.
-   - Repo: Your username/repository-name (e.g., "johnsmith/my-cloud").
-   - Path: The folder name where images are kept (e.g., "images").
-3. Click "RELOAD GEAR" or "Refresh List" to see your files.
+PHASE 1: PREPARE THE VAULT (GITHUB SETUP)
+-----------------------------------------
+1. LOG IN to your GitHub account.
+2. CREATE A REPOSITORY: Give it a name like "my-inventory".
+3. CREATE A FOLDER: (Optional) Inside the repo, create a folder
+   named "images". 
+   *Note: Add a small text file to it so GitHub saves the folder.*
 
-3. FEATURES
------------
-- LOOT ITEM: Click this to upload a new image from your computer.
-- RELOAD GEAR: Click this to fetch the latest images from GitHub.
-- DISCARD/DELETE: Click the delete button on any image to remove it.
+4. GENERATE YOUR SECRET KEY (TOKEN):
+   - Go to Settings > Developer Settings.
+   - Click "Personal access tokens" > "Tokens (classic)".
+   - Click "Generate new token (classic)".
+   - SCOPE: Check the box for "repo".
+   - EXPIRY: Set it to "90 days".
+   - COPY the code (ghp_...) and keep it safe!
 
-4. IMPORTANT NOTES
-------------------
-- Security: Do not share your GitHub Token with others. 
-- Overwriting: If you upload an image with the same filename as 
-  one already in the folder, the app will update the existing file.
-- Formats: Use .jpg, .png, .gif, or .webp files.
+PHASE 2: CONNECTING THE GEAR
+----------------------------
+1. OPEN index.html in your browser.
+2. [SECRET KEY]: Paste your GitHub Token.
+3. [USER/REPO]: Type your username and repo name 
+   (Example: octocat/my-inventory).
+4. [FOLDER_PATH]: Type your folder name (Example: images).
+5. Click "RELOAD GEAR" to establish the connection.
 
+PHASE 3: HOW TO PLAY
+--------------------
+- UPLOAD ITEM: Select an image from your computer to store it
+  in the cloud vault.
+- RELOAD GEAR: Sync with the cloud to see your current items.
+- DISCARD: Permanently remove an item from your cloud vault.
+
+TECHNICAL LOGS
+--------------
+- Storage Backend: GitHub REST API
+- Encoding: Base64
+- Theme: 2D Retro Game (8-bit)
 ===========================================================
